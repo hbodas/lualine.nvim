@@ -76,7 +76,7 @@ function Tab:render()
 
   -- apply separators
   if self.options.self.section < 'x' and not self.first then
-    local sep_before = self:separator_before()
+    local sep_before = self:separator_before() or ''
     line = sep_before .. line
     self.len = self.len + vim.fn.strchars(sep_before)
   elseif self.options.self.section >= 'x' and not self.last then
